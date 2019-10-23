@@ -1,0 +1,142 @@
+@import './apps.scss';
+
+.aboutme{
+	#cv{
+		padding:0 0 25px 0;
+	}
+	margin: 0 auto;
+	padding:15px;
+	margin-block-end: 15px;
+	height: 100%;
+	.aboutTitle{
+		margin-block-start: 15px;
+		text-align: left;
+		padding: 45px 45px 10px 0px;
+		border-bottom: solid 5px #ff3bba;
+		color: pink;
+		width: fit-content;
+	}
+	.about{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		width: 100%;
+		background-color: #f9c7c6;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: row-reverse;
+		align-items: center;
+		p {
+			padding: 5% 50px 5% 50px;
+			text-align: left;
+			width: 45%;
+			min-width: 200px;
+		}
+		.photo{
+			background-color: white;
+			margin: 20px;
+			// border: 2px black solid;
+			box-shadow: 1px 1px 6px #ab054a2e;
+			transform: rotate(5deg);
+			height: 500px;
+			width: 500px;
+			background-image:url("/static/client/photo.png");
+			background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		    border: white 25px solid;
+		}
+	}
+}
+.skills{
+	margin-block-start: 50px;
+	.pts{
+		display: flex;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		width:100%;
+		padding:20px;
+		.col_skills{
+			width:50%;
+			.line_skills{
+				margin: 5px;
+				.val_skills{
+					height:50px;
+					display: inline-block;
+					width:55%;
+					border: solid 3px #f9c7c6;
+					padding: 5px;
+					vertical-align: middle;
+					.fill{
+						background-color:#ffa8d0;
+						height:100%;
+						border-bottom: #ff008178;
+					    border-bottom-width: 34px;
+					    border-bottom-style: groove;
+					}
+				}
+				text-align:right;
+				line-height:25px;
+			}
+		}
+	}
+}
+.timeline{
+	display:block;
+}
+.timelineMobile{
+	display:none;
+}
+@media (max-width: $breakpoint-tablet) {
+	.aboutme{
+		.aboutTitle{
+			padding:0;
+		}
+		.about{
+			.photo{
+				margin:10px;
+				height:250px;
+				width:250px;
+				transform: rotate(5deg);
+				border-width: 10px;
+			}
+		}
+	}
+	.timeline{
+		display:none;
+	}
+	.timelineMobile{display:block;}
+	.skills .pts {
+		display: block;
+		.col_skills{
+			width:100%;
+			display:inline-block;
+			.line_skills{
+				text-align: left;
+				.val_skills{
+					width:100%;
+				}
+			}
+		}
+	}
+	@media (max-width: $mobilePhone) {
+		.aboutme{
+			.about{
+				display:block;
+				p{
+					margin:0 auto;
+					padding:20px;
+					width:90%;
+				}
+				.photo{
+					transform: rotate(0deg);
+					margin: 0 auto
+				}
+			}
+		}
+	}
+}

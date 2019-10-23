@@ -1,0 +1,2 @@
+current directory where all the logos and pictures will be stored.
+Empty because of public files.

@@ -1,0 +1,28 @@
+.categories{
+	.illustrations, .webDesign{
+		position: relative;
+		margin-top:15px;
+		margin-bottom:15px;
+	}
+	.carousel__slide{
+		position: relative;
+		border: solid #ffffff8f 1px;
+		width: 100%;
+		min-height: 350px;
+		margin-top: 23px;
+		background-repeat: no-repeat;
+		background-position: top;
+		background-position-y: -100px;
+		background-size: cover;
+		border-top: solid #ffffff8a 15px;
+		border-bottom: solid #ffffff8a 15px;
+	}
+}
+
+@media only screen and (max-width:768px) { /*FOR TABLET */
+	.categories{
+		.carousel__slide{
+			width:100%;
+		}
+	}
+}

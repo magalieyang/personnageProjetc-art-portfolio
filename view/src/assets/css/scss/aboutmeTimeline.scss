@@ -1,0 +1,95 @@
+.timeline{
+	width: 100%;
+	margin: 25px 0 55px 0;
+	ol{
+		background-color:#ffe8ec;
+		margin: 0 auto;
+		padding: 0 25px;
+		list-style-type: none;
+		list-style-type: none;
+		overflow: hidden;
+		white-space: nowrap;
+	    overflow-x: scroll;
+	    width: 100%;
+	    height: 635px;
+		li {
+			vertical-align: bottom;
+			display:inline-block;
+			border-bottom: solid 2px #ff0081;
+			text-align: center;
+			padding: 20px 0;
+			div {
+				max-width:250px;
+				padding: 20px;
+				white-space: pre-wrap;
+				background-color:white;
+				border-radius: 20px;
+			}
+		}
+
+		li:nth-child(odd){
+			border-top: solid 2px #ff0081;
+			border-bottom: none;
+			transform: translateY(calc(-1.5px + 100%));
+			div {
+				padding:0 20px 20px 20px;
+			}
+			div::before {
+				content: '';
+			    width: 0;
+			    height: 0;
+			    border-style: solid;
+				border-width: 0 17.5px 20px 17.5px;
+				border-color: transparent transparent white transparent;
+				display:block;
+				transform: translateY(calc(-100%));
+			}
+			&::before{ //dots
+				content: '';
+				height: 25px;
+				width: 25px;
+				background-color: #bbb;
+				border-radius: 50%;
+				display: block;
+				background-color: #88e8ff;
+				border: solid 2px #13d3de;
+				transform: translateY(calc(-100% - 5px)) translateX(+100%);
+			}
+		}
+
+		li:not(:nth-child(odd)){
+			&::after{ //dots
+				content: '';
+				height: 25px;
+				width: 25px;
+				background-color: red;
+				border-radius: 50%;
+				display: block;
+				background-color: #88e8ff;
+				border: solid 2px #13d3de;
+				transform: translateY(calc(+100% + 10px)) translateX(+100%);
+			}
+			div::after {
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 20px 17.5px 0 17.5px;
+			    border-color: #ffffff transparent transparent transparent;
+			    display: block;
+			    -webkit-transform: translateY(calc(+100%)) ;
+			    transform: translateY(calc(+100% + 20px)) ;
+			}
+		}
+		&::after{
+			content:'';
+			width: 0;
+			height: 0;
+			border-style: solid;
+		    border-width: 5px 0 5px 22.5px;
+		    border-color: transparent transparent transparent #ff0080;
+		    display: inline-block;
+		    transform: translateY(+75%);
+		}
+	}
+}
